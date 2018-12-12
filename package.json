@@ -1,0 +1,38 @@
+{
+  "name": "design-patterns-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "compile": "npx babel js/src --out-dir js/dist",
+    "watch": "npx babel js/src --watch --out-dir js/dist",
+    "test": "npm run-script compile && npx mocha -r esm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "chai": "^4.2.0",
+    "esm": "^3.0.84",
+    "mocha": "^5.2.0",
+    "sinon": "^7.1.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ],
+      "@babel/preset-react"
+    ]
+  }
+}
